@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { 
+  Typography,
+  AppBar,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  CssBaseline,
+  Grid,
+  Toolbar,
+  Container
+} from '@material-ui/core';
+
+// https://material-ui.com/components/icons/
+// https://material-ui.com/components/material-icons/#material-icons
+import {PhotoCamera} from '@material-ui/icons';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline /> {/* Default styling for Material UI */}
+      <AppBar position='relative'>
+        <Toolbar>
+          <PhotoCamera/>
+          <Typography variant='h6'>
+            Photo Album
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
 
